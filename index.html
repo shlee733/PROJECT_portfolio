@@ -21,12 +21,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/common.css" />
+    <script src="./common.js" defer></script>
   </head>
   <body>
     <div class="wrap">
       <div class="entire">
-        <section class="home">
+        <section class="sec home">
           <div class="text_con">
             <p>
               한 단계씩 꾸준히 발전해나가는 프론트엔드 개발자 이상희입니다!
@@ -50,11 +55,11 @@
             <p class="flow_txt">step by step, then jump!</p>
             <p class="flow_txt">step by step, then jump!</p>
           </div>
-          <button class="btn_right">
+          <button class="btn_right" onclick="moveNext()">
             <img src="./image/right.svg" alt="btn_right" />
           </button>
         </section>
-        <section class="profile">
+        <section class="sec profile">
           <div class="page_title">PROFILE</div>
           <div class="profile_detail">
             <div class="detail_left">
@@ -128,28 +133,190 @@
             <p class="flow_txt">step by step, then jump!</p>
           </div>
           <div class="btnSet">
-            <button class="btn_right">
+            <button class="btn_right" onclick="moveNext()">
               <img src="./image/right.svg" alt="btn_right" />
             </button>
-            <button class="btn_left">
+            <button class="btn_left" onclick="movePrev()">
               <img src="./image/left.svg" alt="btn_left" />
             </button>
           </div>
         </section>
-        <section class="portfolio">
+        <section class="sec portfolio">
           <div class="page_title">PORTFOLIO</div>
-          <div class="portfolio_detail"></div>
+          <div class="portfolio_detail">
+            <div class="swiper slide1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="pj_detail">
+                    <h2>#01 아이소풍</h2>
+                    <span class="pj_tool">React</span>
+                    <p class="pj_desc">
+                      프로젝트 설명란 프로젝트 설명란 프로젝트 설명란 프로젝트
+                      설명란 프로젝트 설명란 프로젝트 설명란 프로젝트 설명란
+                      프로젝트 설명란 프로젝트 설명란
+                    </p>
+                    <div class="pj_link">
+                      <a href="#"><i class="fa-regular fa-eye"></i></a>
+                      <a href="#"><i class="fa-solid fa-code fa-fade"></i></a>
+                    </div>
+                  </div>
+                  <div class="pj_img">
+                    <img src="./image/pj03.png" alt="pj01" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="pj_detail">
+                    <h2>#02 대전시민천문대</h2>
+                    <span class="pj_tool">React</span>
+                    <p class="pj_desc">
+                      프로젝트 설명란 프로젝트 설명란 프로젝트 설명란 프로젝트
+                      설명란 프로젝트 설명란 프로젝트 설명란 프로젝트 설명란
+                      프로젝트 설명란 프로젝트 설명란
+                    </p>
+                    <div class="pj_link">
+                      <a href="#"><i class="fa-regular fa-eye"></i></a>
+                      <a href="#"><i class="fa-solid fa-code fa-fade"></i></a>
+                    </div>
+                  </div>
+                  <div class="pj_img">
+                    <img src="./image/pj02.png" alt="pj02" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="pj_detail">
+                    <h2>#03 newneek</h2>
+                    <span class="pj_tool">React</span>
+                    <p class="pj_desc">
+                      프로젝트 설명란 프로젝트 설명란 프로젝트 설명란 프로젝트
+                      설명란 프로젝트 설명란 프로젝트 설명란 프로젝트 설명란
+                      프로젝트 설명란 프로젝트 설명란
+                    </p>
+                    <div class="pj_link">
+                      <a href="#"><i class="fa-regular fa-eye"></i></a>
+                      <a href="#"><i class="fa-solid fa-code fa-fade"></i></a>
+                    </div>
+                  </div>
+                  <div class="pj_img">
+                    <img src="./image/pj01.png" alt="pj03" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="pj_detail">
+                    <h2>#01 아이소풍</h2>
+                    <span class="pj_tool">React</span>
+                    <p class="pj_desc">
+                      프로젝트 설명란 프로젝트 설명란 프로젝트 설명란 프로젝트
+                      설명란 프로젝트 설명란 프로젝트 설명란 프로젝트 설명란
+                      프로젝트 설명란 프로젝트 설명란
+                    </p>
+                    <div class="pj_link">
+                      <a href="#"><i class="fa-regular fa-eye"></i></a>
+                      <a href="#"><i class="fa-solid fa-code fa-fade"></i></a>
+                    </div>
+                  </div>
+                  <div class="pj_img">
+                    <img src="./image/pj03.png" alt="pj01" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="pj_detail">
+                    <h2>#01 아이소풍</h2>
+                    <span class="pj_tool">React</span>
+                    <p class="pj_desc">
+                      프로젝트 설명란 프로젝트 설명란 프로젝트 설명란 프로젝트
+                      설명란 프로젝트 설명란 프로젝트 설명란 프로젝트 설명란
+                      프로젝트 설명란 프로젝트 설명란
+                    </p>
+                    <div class="pj_link">
+                      <a href="#"><i class="fa-regular fa-eye"></i></a>
+                      <a href="#"><i class="fa-solid fa-code fa-fade"></i></a>
+                    </div>
+                  </div>
+                  <div class="pj_img">
+                    <img src="./image/pj03.png" alt="pj01" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="pj_detail">
+                    <h2>#01 아이소풍</h2>
+                    <span class="pj_tool">React</span>
+                    <p class="pj_desc">
+                      프로젝트 설명란 프로젝트 설명란 프로젝트 설명란 프로젝트
+                      설명란 프로젝트 설명란 프로젝트 설명란 프로젝트 설명란
+                      프로젝트 설명란 프로젝트 설명란
+                    </p>
+                    <div class="pj_link">
+                      <a href="#"><i class="fa-regular fa-eye"></i></a>
+                      <a href="#"><i class="fa-solid fa-code fa-fade"></i></a>
+                    </div>
+                  </div>
+                  <div class="pj_img">
+                    <img src="./image/pj03.png" alt="pj01" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="flow_col">
+            <p class="flow_txt">step by step, then jump!</p>
+            <p class="flow_txt">step by step, then jump!</p>
+            <p class="flow_txt">step by step, then jump!</p>
+            <p class="flow_txt">step by step, then jump!</p>
+            <p class="flow_txt">step by step, then jump!</p>
+          </div>
           <div class="btnSet">
-            <button class="btn_right">
+            <button class="btn_right" onclick="moveNext()">
               <img src="./image/right.svg" alt="btn_right" />
             </button>
-            <button class="btn_left">
+            <button class="btn_left" onclick="movePrev()">
               <img src="./image/left.svg" alt="btn_left" />
             </button>
           </div>
         </section>
-        <section class="contact">컨택</section>
+        <section class="sec contact">
+          <div class="page_title">CONTACT</div>
+          <div class="contact_detail">
+            <div class="contact_desc">
+              <p class="slogan">step by step, then <strong>Jump!</strong></p>
+              <p class="contact_txt">
+                함께 <strong>도약</strong>할 인재를 찾고 계신가요? 언제든지
+                연락주세요! <br />
+                <strong>소통</strong>의 길은 항상 열려있습니다!
+              </p>
+              <div>
+                <p><i class="fa-regular fa-circle-user"></i> 이상희</p>
+                <p><i class="fa-regular fa-envelope"></i> pttc733@gmail.com</p>
+                <div class="kakao_qr">
+                  <i class="fa-regular fa-comments"></i>
+                  <img src="./image/qr.png" alt="qr" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flow_row">
+            <p class="flow_txt">step by step, then jump!</p>
+            <p class="flow_txt">step by step, then jump!</p>
+            <p class="flow_txt">step by step, then jump!</p>
+            <p class="flow_txt">step by step, then jump!</p>
+            <p class="flow_txt">step by step, then jump!</p>
+          </div>
+          <button class="btn_left" onclick="movePrev()">
+            <img src="./image/left.svg" alt="btn_left" />
+          </button>
+        </section>
       </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      let swiper = new Swiper(".slide1", {
+        direction: "vertical",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>

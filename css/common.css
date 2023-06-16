@@ -18,15 +18,16 @@
   position: absolute;
   width: 400vw;
   height: 160vh;
+  transition: transform 0.5s ease;
   /* sec1 */
-  /* left: 0;
-  top: -60vh; */
+  left: 0;
+  top: -60vh;
   /* sec2 */
   /* left: -100vw;
   top: -40vh; */
   /* sec3 */
-  left: -200vw;
-  top: -20vh;
+  /* left: -200vw;
+  top: -20vh; */
   /* sec4 */
   /* left: -300vw;
   top: 0; */
@@ -63,7 +64,7 @@
 }
 .text_con > p {
   font-size: 24px;
-  line-height: 36px;
+  line-height: 1.5;
 }
 .text_con strong {
   font-weight: 800;
@@ -91,7 +92,7 @@
   animation: flow_row 7s linear infinite;
 }
 
-.home .flow_col {
+.flow_col {
   width: 75px;
   height: 100vh;
   background-color: #4b4b4b50;
@@ -104,7 +105,7 @@
   top: 0;
   left: 20vw;
 }
-.home .flow_col .flow_txt {
+.flow_col .flow_txt {
   writing-mode: vertical-lr;
   /* transform: rotate(180deg); */
   padding: 2rem 0;
@@ -115,9 +116,12 @@
   /* color: red; */
 }
 .btnSet {
-  margin: 0 3rem 0 2rem;
+  margin: 0 3rem 0 5rem;
   position: relative;
   right: 0;
+  /* left: 0; */
+  /* top: 0; */
+  /* border: 1px solid gray; */
 }
 .btn_right,
 .btn_left {
@@ -198,7 +202,7 @@ h2 {
 }
 .desc {
   padding: 1rem 0;
-  line-height: 1.5rem;
+  line-height: 1.5;
 }
 .history {
   /* border: 1px solid red; */
@@ -269,6 +273,111 @@ h2 {
   width: 70%;
   height: 800px;
   padding: 2rem;
+  position: relative;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+  /* overflow: hidden; */
+}
+
+.swiper-slide {
+  /* text-align: center; */
+  /* background: #fff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* border: 1px solid blue; */
+  /* padding: 1rem; */
+}
+
+.pj_detail {
+  /* border: 1px solid salmon; */
+  width: 40%;
+  padding-right: 2rem;
+}
+.pj_detail h2 {
+  margin-bottom: 1rem;
+}
+.pj_detail .pj_tool {
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+  background-color: white;
+  margin-bottom: 1rem;
+}
+.pj_detail .pj_desc {
+  /* border: 1px solid brown; */
+  margin-bottom: 1rem;
+}
+.pj_link {
+  display: flex;
+  justify-content: right;
+}
+.pj_link a {
+  /* display: inline-block; */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #6f6f6f30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #222;
+  margin-left: 1rem;
+}
+
+.pj_img {
+  /* border: 1px solid lightgreen; */
+  width: 60%;
+  height: 100%;
+  padding: 1rem;
+  /* display: flex; */
+  /* align-items: center; */
+}
+.pj_img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* object-fit: contain; */
+  object-fit: contain;
+  /* box-shadow: 0 1rem 1rem #00000050; */
+  filter: drop-shadow(0 0.5rem 0.3rem #00000060);
+  /* border: 1px solid greenyellow; */
+}
+
+.portfolio_detail .swiper-pagination {
+  /* border: 1px solid aqua; */
+  left: 100%;
+  top: auto;
+  bottom: 0;
+  transform: translate3d(0, 0, 0);
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.portfolio_detail
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #031f1e;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+}
+.portfolio_detail .swiper-pagination .swiper-pagination-bullet {
+  background-color: #8cd7d4;
+  opacity: 1;
+}
+
+.portfolio .flow_col {
+  left: 0;
 }
 
 /* <------------------------ contact 영역 ------------------------> */
@@ -280,6 +389,68 @@ h2 {
   position: absolute;
   bottom: 60vh;
   left: 300vw;
+  background-image: url(../image/sec4.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.contact_detail {
+  background-color: #fdfbf7;
+  max-width: 1000px;
+  width: 70%;
+  height: 50vh;
+  padding: 2rem;
+  /* display: flex;
+  align-items: center; */
+}
+.contact_desc {
+  font-size: 1.5rem;
+  /* border: 1px solid red; */
+  /* align-self: center; */
+}
+.contact_desc .slogan {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.contact_desc .slogan strong {
+  font-family: "Kaushan Script", cursive;
+  font-size: 3rem;
+}
+.contact_desc .contact_txt {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+.contact_desc .contact_txt strong {
+  font-weight: 700;
+}
+
+.contact_desc > div > p {
+  /* padding: 0.5rem 0; */
+  margin-bottom: 0.5rem;
+}
+.contact_desc > div i {
+  /* border: 1px solid red; */
+  margin-right: 1rem;
+}
+.kakao_qr {
+  display: flex;
+  padding: 0.5rem 0;
+}
+.kakao_qr img {
+  width: 100px;
+  height: 100px;
+}
+
+.contact .flow_row {
+  top: 0;
+}
+
+.contact .btn_left {
+  position: absolute;
+  right: 3rem;
+  top: calc(50% - 20px);
 }
 
 @keyframes flow_row {
