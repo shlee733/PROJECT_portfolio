@@ -19,6 +19,7 @@
   width: 400vw;
   height: 160vh;
   transition: transform 0.5s ease;
+  resize: both;
   /* sec1 */
   left: 0;
   top: -60vh;
@@ -116,20 +117,14 @@
   /* color: red; */
 }
 .btnSet {
-  margin: 0 3rem 0 4rem;
-  position: relative;
-  right: 0;
+  /* margin: 0 3rem 0 4rem; */
+  position: absolute;
+  right: 3rem;
   /* left: 0; */
   /* display: block; */
-  /* top: 50%; */
-  top: 0;
-  border: 1px solid gray;
-}
-.home .btnSet,
-.contact .btnSet {
-  position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  border: 1px solid gray;
 }
 .btn_right,
 .btn_left {
@@ -140,6 +135,17 @@
   /* top: 50%; */
   /* right: 2rem; */
   display: block;
+}
+.btn_right {
+  /* top: 47%; */
+}
+.home .btn_right {
+  /* position: absolute;
+  right: 3rem;
+  top: calc(50% - 20px); */
+}
+.btn_left {
+  /* top: 53%; */
 }
 .btn_right img,
 .btn_left img {
