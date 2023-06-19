@@ -21,26 +21,20 @@ btnLeft.forEach((el) => {
 });
 
 function moveNext(currentSection) {
-  entire.style.transform = `translate(${-(currentSection - 1) * 100}vw, ${
-    currentSection * 20
-  }vh)`;
+  entire.style.transform = `translate(${-(currentSection-1)*100}vw, ${currentSection * 20}vh)`;
   setTimeout(() => {
-    entire.style.transform = `translate(${-currentSection * 100}vw, ${
-      currentSection * 20
-    }vh)`;
+    entire.style.transform = `translate(${-currentSection*100}vw, ${currentSection * 20}vh)`;
   }, 500);
 }
 
 function movePrev(currentSection) {
-  entire.style.transform = `translate(${-currentSection * 100}vw, ${
-    currentSection * 20 + 20
-  }vh)`;
+  entire.style.transform = `translate(${-(currentSection)*100}vw, ${(currentSection) * 20 + 20}vh)`;
   setTimeout(() => {
-    entire.style.transform = `translate(${-currentSection * 100}vw, ${
-      currentSection * 20
-    }vh)`;
+    entire.style.transform = `translate(${-(currentSection)*100}vw, ${currentSection * 20}vh)`;
   }, 500);
 }
+
+
 
 let swiper = new Swiper(".slide1", {
   direction: "vertical",

@@ -116,20 +116,20 @@
   /* color: red; */
 }
 .btnSet {
-  margin: 0 3rem 0 4rem;
+  /* border: 1px solid gray; */
   position: relative;
-  right: 0;
-  /* left: 0; */
-  /* display: block; */
-  /* top: 50%; */
   top: 0;
-  border: 1px solid gray;
+  right: 0;
+  margin-left: auto;
+  margin-right: 3rem;
+  padding-left: 2rem;
 }
 .home .btnSet,
 .contact .btnSet {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  /* right: 3rem; */
 }
 .btn_right,
 .btn_left {
@@ -297,7 +297,7 @@ h2 {
   padding-right: 2rem;
 }
 .pj_detail h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .pj_detail .pj_tool {
   border: 1px solid #aaaaaa;
@@ -305,7 +305,7 @@ h2 {
   padding: 0.25rem 1rem;
   border-radius: 1rem;
   background-color: white;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .pj_detail .pj_desc {
   /* border: 1px solid brown; */
@@ -450,6 +450,73 @@ h2 {
   /* position: absolute;
   right: 3rem;
   top: calc(50% - 20px); */
+}
+
+/* <------------------------ 반응형 ------------------------> */
+@media (max-width: 1300px) {
+  .portfolio .page_title {
+    /* display: none; */
+    /* transform: rotate(270deg); */
+    background-color: #6f6f6f40;
+    width: 15vw;
+    padding: 1rem;
+    writing-mode: vertical-lr;
+    rotate: 180deg;
+  }
+}
+@media (max-width: 1000px) {
+  .portfolio {
+    justify-content: flex-end;
+    /* margin: auto; */
+  }
+  .portfolio .page_title {
+    display: none;
+  }
+  .portfolio_detail::before {
+    content: "PORTFOLIO";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #6f6f6f70;
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+    transform: translateY(-100%);
+  }
+  .swiper-slide {
+    flex-direction: column;
+  }
+  .swiper-slide > * {
+    width: 100%;
+    /* flex: 1; */
+    /* flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto; */
+    border: 1px solid slateblue;
+  }
+  .swiper-slide .pj_detail {
+    /* flex: 1; */
+    /* border: 1px solid red; */
+  }
+  .swiper-slide .pj_img {
+    flex: 1 !important;
+    height: 200px;
+    /* max-height: 70%; */
+    /* height: auto; */
+    /* position: relative; */
+  }
+  .swiper-slide .pj_img img {
+    /* height: 90%; */
+    width: 100%;
+  }
+  .portfolio .pj_desc {
+    font-size: 1rem;
+  }
+  .portfolio .btnSet {
+    /* display: none; */
+    margin-left: 0;
+    margin-right: 1rem;
+  }
 }
 
 @keyframes flow_row {
